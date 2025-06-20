@@ -91,7 +91,13 @@ export default function Home() {
             <div className="grid md:grid-cols-3 gap-8">
               <Card className="bg-[var(--dark-card)] border-[var(--gold)]/30 rounded-xl p-8 text-center">
                 <CardContent className="p-0">
-                  <Medal className="h-12 w-12 text-[var(--gold)] mb-4 mx-auto" />
+                  <div className="relative w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-2 border-[var(--gold)]">
+                    <img 
+                      src="/attached_assets/usain-bolt-olympics-rio-2016-gold-medals_1750453020133.jpg" 
+                      alt="Usain Bolt com medalha de ouro olímpica"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                   <p className="text-gray-300 leading-relaxed">
                     <strong className="text-[var(--gold)]">Atletas olímpicos</strong> treinam anos para segundos de sucesso.
                   </p>
@@ -99,7 +105,13 @@ export default function Home() {
               </Card>
               <Card className="bg-[var(--dark-card)] border-[var(--gold)]/30 rounded-xl p-8 text-center">
                 <CardContent className="p-0">
-                  <Building className="h-12 w-12 text-[var(--gold)] mb-4 mx-auto" />
+                  <div className="relative w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-2 border-[var(--gold)]">
+                    <img 
+                      src="/attached_assets/flavio-augusto_1750453020134.jpg" 
+                      alt="Flavio Augusto - Empreendedor de sucesso"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                   <p className="text-gray-300 leading-relaxed">
                     <strong className="text-[var(--gold)]">Empreendedores de sucesso</strong> planejam e investem por anos até a empresa prosperar.
                   </p>
@@ -107,7 +119,13 @@ export default function Home() {
               </Card>
               <Card className="bg-[var(--dark-card)] border-[var(--gold)]/30 rounded-xl p-8 text-center">
                 <CardContent className="p-0">
-                  <PiggyBank className="h-12 w-12 text-[var(--gold)] mb-4 mx-auto" />
+                  <div className="relative w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-2 border-[var(--gold)]">
+                    <img 
+                      src="/attached_assets/5db7635b714142a139e09cc7_30462_tumb_750Xauto_1750453020134.jpg" 
+                      alt="Pessoa planejando futuro financeiro"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                   <p className="text-gray-300 leading-relaxed">
                     <strong className="text-[var(--gold)]">Pessoas que poupam</strong> regularmente garantem um futuro tranquilo e estável.
                   </p>
