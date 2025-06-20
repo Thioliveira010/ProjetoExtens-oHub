@@ -109,41 +109,41 @@ export default function ChatInterface() {
             {/* Chat Interface */}
             <div className="bg-[var(--dark-bg)] rounded-xl border border-[var(--dark-border)]">
               {/* Chat Header */}
-              <div className="bg-gradient-to-r from-[var(--gold)]/20 to-[var(--gold)]/10 px-6 py-4 border-b border-[var(--dark-border)] rounded-t-xl">
-                <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-[var(--gold)] rounded-full flex items-center justify-center">
-                    <Bot className="h-5 w-5 text-[var(--dark-bg)]" />
+              <div className="bg-gradient-to-r from-[var(--gold)]/20 to-[var(--gold)]/10 px-4 md:px-6 py-3 md:py-4 border-b border-[var(--dark-border)] rounded-t-xl">
+                <div className="flex items-center space-x-2 md:space-x-3">
+                  <div className="w-8 h-8 md:w-10 md:h-10 bg-[var(--gold)] rounded-full flex items-center justify-center">
+                    <Bot className="h-4 w-4 md:h-5 md:w-5 text-[var(--dark-bg)]" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-[var(--gold)]">Priminho IA</h3>
+                    <h3 className="font-semibold text-[var(--gold)] text-sm md:text-base">Priminho IA</h3>
                     <p className="text-xs text-gray-400">Seu consultor financeiro</p>
                   </div>
                   <div className="ml-auto">
-                    <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                    <div className="w-2 h-2 md:w-3 md:h-3 bg-green-500 rounded-full animate-pulse"></div>
                   </div>
                 </div>
               </div>
 
               {/* Chat Messages */}
-              <div className="p-6 max-h-96 overflow-y-auto space-y-4">
+              <div className="p-4 md:p-6 max-h-96 overflow-y-auto space-y-3 md:space-y-4">
                 {messages.map((message) => (
-                  <div key={message.id} className={`flex items-start space-x-3 ${message.isUser ? 'justify-end' : ''}`}>
+                  <div key={message.id} className={`flex items-start space-x-2 md:space-x-3 ${message.isUser ? 'justify-end' : ''}`}>
                     {message.isUser ? (
                       <>
-                        <div className="bg-[var(--gold)]/20 rounded-lg px-4 py-3 max-w-md">
-                          <p className="text-gray-300">{message.content}</p>
+                        <div className="bg-[var(--gold)]/20 rounded-lg px-3 md:px-4 py-2 md:py-3 max-w-xs md:max-w-md">
+                          <p className="text-gray-300 text-sm md:text-base">{message.content}</p>
                         </div>
-                        <div className="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center flex-shrink-0">
-                          <User className="h-4 w-4 text-white" />
+                        <div className="w-6 h-6 md:w-8 md:h-8 bg-gray-600 rounded-full flex items-center justify-center flex-shrink-0">
+                          <User className="h-3 w-3 md:h-4 md:w-4 text-white" />
                         </div>
                       </>
                     ) : (
                       <>
-                        <div className="w-8 h-8 bg-[var(--gold)] rounded-full flex items-center justify-center flex-shrink-0">
-                          <Bot className="h-4 w-4 text-[var(--dark-bg)]" />
+                        <div className="w-6 h-6 md:w-8 md:h-8 bg-[var(--gold)] rounded-full flex items-center justify-center flex-shrink-0">
+                          <Bot className="h-3 w-3 md:h-4 md:w-4 text-[var(--dark-bg)]" />
                         </div>
-                        <div className="bg-[var(--gold)]/10 rounded-lg px-4 py-3 max-w-md">
-                          <p className="text-gray-300">{message.content}</p>
+                        <div className="bg-[var(--gold)]/10 rounded-lg px-3 md:px-4 py-2 md:py-3 max-w-xs md:max-w-md">
+                          <p className="text-gray-300 text-sm md:text-base">{message.content}</p>
                         </div>
                       </>
                     )}
@@ -152,32 +152,32 @@ export default function ChatInterface() {
               </div>
 
               {/* Chat Input */}
-              <div className="p-4 border-t border-[var(--dark-border)]">
-                <div className="flex space-x-3">
+              <div className="p-3 md:p-4 border-t border-[var(--dark-border)]">
+                <div className="flex space-x-2 md:space-x-3">
                   <Input
                     value={inputValue}
                     onChange={(e) => setInputValue(e.target.value)}
                     onKeyPress={handleKeyPress}
                     placeholder="Digite sua resposta aqui..."
-                    className="flex-1 bg-[var(--dark-card)] border-[var(--dark-border)] text-white placeholder-gray-500 focus:border-[var(--gold)]"
+                    className="flex-1 bg-[var(--dark-card)] border-[var(--dark-border)] text-white placeholder-gray-500 focus:border-[var(--gold)] text-sm md:text-base"
                     disabled={isLoading}
                   />
                   <Button
                     onClick={sendMessage}
                     disabled={isLoading || !inputValue.trim()}
-                    className="bg-[var(--gold)] hover:bg-[var(--gold-dark)] text-[var(--dark-bg)] px-6"
+                    className="bg-[var(--gold)] hover:bg-[var(--gold-dark)] text-[var(--dark-bg)] px-3 md:px-6"
                   >
                     {isLoading ? (
-                      <Loader2 className="h-4 w-4 animate-spin" />
+                      <Loader2 className="h-3 w-3 md:h-4 md:w-4 animate-spin" />
                     ) : (
-                      <Send className="h-4 w-4" />
+                      <Send className="h-3 w-3 md:h-4 md:w-4" />
                     )}
                   </Button>
                 </div>
                 {isLoading && (
-                  <div className="mt-3 flex items-center justify-center space-x-2 text-[var(--gold)]">
-                    <Loader2 className="h-4 w-4 animate-spin" />
-                    <span className="text-sm">Priminho está digitando...</span>
+                  <div className="mt-2 md:mt-3 flex items-center justify-center space-x-2 text-[var(--gold)]">
+                    <Loader2 className="h-3 w-3 md:h-4 md:w-4 animate-spin" />
+                    <span className="text-xs md:text-sm">Priminho está digitando...</span>
                   </div>
                 )}
               </div>
