@@ -5,6 +5,9 @@ import VideoCarousel from "@/components/video-carousel";
 import DataTable from "@/components/data-table";
 import { Card, CardContent } from "@/components/ui/card";
 import { Medal, Building, PiggyBank, Eye, EyeOff, TrendingUp, TrendingDown, Dice6, ChartLine } from "lucide-react";
+import usainBoltImage from "@assets/usain-bolt-olympics-rio-2016-gold-medals_1750453020133.jpg";
+import flavioAugustoImage from "@assets/flavio-augusto_1750453020134.jpg";
+import savingPersonImage from "@assets/5db7635b714142a139e09cc7_30462_tumb_750Xauto_1750453020134.jpg";
 
 export default function Home() {
   return (
@@ -91,9 +94,9 @@ export default function Home() {
             <div className="grid md:grid-cols-3 gap-8">
               <Card className="bg-[var(--dark-card)] border-[var(--gold)]/30 rounded-xl p-8 text-center">
                 <CardContent className="p-0">
-                  <div className="relative w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-2 border-[var(--gold)]">
+                  <div className="relative w-full h-32 mx-auto mb-6 rounded-lg overflow-hidden border-2 border-[var(--gold)]">
                     <img 
-                      src="/attached_assets/usain-bolt-olympics-rio-2016-gold-medals_1750453020133.jpg" 
+                      src={usainBoltImage} 
                       alt="Usain Bolt com medalha de ouro olímpica"
                       className="w-full h-full object-cover"
                     />
@@ -105,9 +108,9 @@ export default function Home() {
               </Card>
               <Card className="bg-[var(--dark-card)] border-[var(--gold)]/30 rounded-xl p-8 text-center">
                 <CardContent className="p-0">
-                  <div className="relative w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-2 border-[var(--gold)]">
+                  <div className="relative w-full h-32 mx-auto mb-6 rounded-lg overflow-hidden border-2 border-[var(--gold)]">
                     <img 
-                      src="/attached_assets/flavio-augusto_1750453020134.jpg" 
+                      src={flavioAugustoImage} 
                       alt="Flavio Augusto - Empreendedor de sucesso"
                       className="w-full h-full object-cover"
                     />
@@ -119,9 +122,9 @@ export default function Home() {
               </Card>
               <Card className="bg-[var(--dark-card)] border-[var(--gold)]/30 rounded-xl p-8 text-center">
                 <CardContent className="p-0">
-                  <div className="relative w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-2 border-[var(--gold)]">
+                  <div className="relative w-full h-32 mx-auto mb-6 rounded-lg overflow-hidden border-2 border-[var(--gold)]">
                     <img 
-                      src="/attached_assets/5db7635b714142a139e09cc7_30462_tumb_750Xauto_1750453020134.jpg" 
+                      src={savingPersonImage} 
                       alt="Pessoa planejando futuro financeiro"
                       className="w-full h-full object-cover"
                     />
