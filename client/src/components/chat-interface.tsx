@@ -83,25 +83,25 @@ export default function ChatInterface() {
   };
 
   return (
-    <section className="py-20 px-6">
+    <section className="py-12 md:py-20 px-4 md:px-6">
       <div className="container mx-auto max-w-4xl">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-8 text-[var(--gold)]">
+        <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-center mb-6 md:mb-8 text-[var(--gold)]">
           Simule você mesmo
         </h2>
-        <p className="text-xl text-gray-300 text-center mb-12 max-w-3xl mx-auto">
+        <p className="text-base sm:text-lg md:text-xl text-gray-300 text-center mb-8 md:mb-12 max-w-3xl mx-auto px-2">
           Antes de tomar qualquer decisão, é importante se conhecer melhor e entender a real situação do seu dinheiro. Bora fazer isso juntos?
         </p>
         
-        <Card className="bg-[var(--dark-card)] border-[var(--gold)]/30 rounded-2xl p-8">
+        <Card className="bg-[var(--dark-card)] border-[var(--gold)]/30 rounded-2xl p-6 md:p-8">
           <CardContent className="p-0">
-            <div className="mb-8">
-              <p className="text-lg text-gray-300 mb-6">Me conta aqui rapidinho:</p>
-              <div className="space-y-2 text-gray-300">
+            <div className="mb-6 md:mb-8">
+              <p className="text-base md:text-lg text-gray-300 mb-4 md:mb-6">Me conta aqui rapidinho:</p>
+              <div className="space-y-2 text-gray-300 text-sm md:text-base">
                 <p>1️⃣ Qual é o seu nome?</p>
                 <p>2️⃣ Quanto você recebe por mês?</p>
                 <p>3️⃣ E quanto você consegue separar por mês — seja pra investir ou pra jogar nas bets?</p>
               </div>
-              <p className="text-gray-300 mt-6">
+              <p className="text-gray-300 mt-4 md:mt-6 text-sm md:text-base">
                 Com isso, eu te mostro de forma simples como o seu dinheiro pode trabalhar por você no longo prazo... e te alerto, com carinho, sobre os perigos das apostas.
               </p>
             </div>

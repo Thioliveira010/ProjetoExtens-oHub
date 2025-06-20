@@ -19,12 +19,12 @@ export default function HeroSection() {
       
       {/* Main hero content */}
       <div className="relative z-5 container mx-auto max-w-4xl px-6 text-center mt-20">
-        <h1 className="text-6xl md:text-8xl font-bold text-gradient-gold mb-8 leading-tight">
+        <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold text-gradient-gold mb-6 md:mb-8 leading-tight">
           Investimentos<br />
           <span className="text-red-500">X</span><br />
           Bets
         </h1>
-        <h2 className="text-2xl md:text-3xl font-light text-gray-300 max-w-2xl mx-auto leading-relaxed">
+        <h2 className="text-lg sm:text-xl md:text-3xl font-light text-gray-300 max-w-2xl mx-auto leading-relaxed px-4">
           A Verdade Nua e Crua sobre seu futuro
         </h2>
       </div>
