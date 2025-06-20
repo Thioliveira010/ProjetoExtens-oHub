@@ -41,7 +41,7 @@ export default function ChatInterface() {
 
     try {
       // Send to webhook
-      const response = await fetch('https://thioliveira010.app.n8n.cloud/webhook-test/Projeto de extensão', {
+      const response = await fetch('https://thioliveira010.app.n8n.cloud/webhook/Projeto de extensão', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -51,10 +51,10 @@ export default function ChatInterface() {
 
       const data = await response.json();
       
-      // Add bot response
+      // Add bot response using only the webhook response
       const botResponse: Message = {
         id: (Date.now() + 1).toString(),
-        content: data.response || data.message || 'Obrigado pela sua mensagem! Vou analisar suas informações e te dar dicas personalizadas sobre como seu dinheiro pode render mais através de investimentos inteligentes.',
+        content: typeof data === 'string' ? data : (data.output || data.response || data.message || JSON.stringify(data)),
         isUser: false,
         timestamp: new Date()
       };
